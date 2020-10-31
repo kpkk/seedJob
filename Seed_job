@@ -1,0 +1,15 @@
+job("second_dsl_job"){
+  description ("test automation job")
+  scm{
+    git('https://github.com/kpkk/ACMEBuild.git','master')
+  }
+  triggers{
+    scm('* * * * *')
+  }
+  steps{
+    maven('package')
+  }
+  publishers{
+    mailer('kadarla.pradeep4@gmail.com',true,true)
+  }
+}
