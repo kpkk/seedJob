@@ -1,4 +1,4 @@
-job("first_dsl_job"){
+job("second_dsl_job"){
   description ("test automation job")
   scm{
     git('https://github.com/kpkk/ACMEBuild.git','master')
