@@ -2,6 +2,9 @@ pipeline {
   agent any
   stages {
     stage('Development') {
+      when {
+        branch master
+      }
       steps {
         echo 'fetch the code'
       }
