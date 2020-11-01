@@ -19,6 +19,7 @@ pipeline {
       steps {
         echo 'deploy the code'
         echo 'certify the build'
+        waitUntil(initialRecurrencePeriod: 2)
       }
     }
 
